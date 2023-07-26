@@ -8,15 +8,15 @@
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	int count_of_bytes;
+	int cbytes;
 
-	for (count_of_bytes = 0; count_of_bytes < n && src[count_of_bytes] != '\0'; count_of_bytes++)
+	for (cbytes = 0; cbytes < n && src[cbytes] != '\0'; cbytes++)
 	{
-		dest[count_of_bytes] = src[count_of_bytes];
+		dest[cbytes] = src[cbytes];
 	}
-	for (; count_of_bytes < n; count_of_bytes++)
+	for (; cbytes < n; cbytes++)
 	{
-		dest[count_of_bytes] = '\0';
+		dest[cbytes] = '\0';
 	}
 	return (dest);
 }
