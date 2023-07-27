@@ -1,12 +1,11 @@
 #include "main.h"
 #include <stdio.h>
-
 /**
  * print_array - check the code
  * @a: an array of integers
  * @n: the number of elements to swap
  *
- * Return: nothing.
+ * Return: nothing
  */
 void print_array(int *a, int n)
 {
@@ -24,7 +23,6 @@ void print_array(int *a, int n)
 	}
 	printf("\n");
 }
-
 /**
  * main - check the code
  *
