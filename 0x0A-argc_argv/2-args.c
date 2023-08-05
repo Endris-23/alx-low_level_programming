@@ -1,18 +1,18 @@
 #include <stdio.h>
-#include "main.h"
 /**
  * main - prints all arguments it receives
- * @argc: number of arguments
+ * @argc: int
  * @argv: array of arguments
  * Return: Always 0 (success)
  */
-int main(int argc, char*argv[])
+int main(int argc, char const *argv[])
 {
-	int i;
+	int i = 0;
 
-	for (i = 0; i < argc; i++)
+	while (argc--)
 	{
-		printf("%s\n",argv[1]);
+		printf("%s\n", argv[i]);
+		i++;
 	}
 	return (0);
 }
