@@ -1,26 +1,52 @@
 #include "3-calc.h"
 /**
- * get_op_func - returns pointer to right op func
- * @s: string operator
- * Return: the right function pointer
+ * op_add - adds two integers
+ * @a: the first int
+ * @b: the second int
+ * Return: the sum
  */
-int (*get_op_func(char *s))(int, int)
+int op_add(int a, int b)
 {
-	op_t ops[] = {
-		{"+", op_add},
-		{"-", op_sub},
-		{"*", op_mul},
-		{"/", op_dov},
-		{"%", op_mod},
-		{NULL, NULL}
-	};
-	int i = 0;
-
-	while (i < 5)
-	{
-		if (s && s[0] == ops[i].op[0] && !s[1])
-			return (ops[i].f);
-		i++;
-	}
-	return (NULL);
+	return (a + b);
 }
+/**
+ * op_sub - substructs two integers
+ * @a: the first int
+ * @b: the second int
+ * Return: the difference
+ */
+int op_sub(int a, int b)
+{
+	return (a - b);
+}
+/**
+ * op_mul - multiplies two int
+ * @a: the first int
+ * @b: the second int
+ * Return: the product
+ */
+int op_mul(int a, int b)
+{
+	return (a * b);
+}
+/**
+ * op_div - divides two int
+ * @a: the first int
+ * @b: the second int
+ * Return: the quatient
+ */
+int op_div(int a, int b)
+{
+	return (a / b);
+}
+/**
+ * op_mod - module two int
+ * @a: the first int
+ * @b: the second int
+ * Return: the remainder
+ */
+int op_mod(int a, int b)
+{
+	return (a % b);
+}
+
