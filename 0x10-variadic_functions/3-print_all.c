@@ -51,4 +51,19 @@ void print_all(const char * const format, ...)
 	char *separator = "";
 	va_list ap;
 	token_t token[] = {
-
+		{"c", format_char},
+		{"i", fofmat_int},
+		{"f", format_float},
+		{"s", format_string},
+		{NULL, NULL}
+	};
+	va_start(ap, format);
+	while (format && format[i])
+	{
+		j = 0;
+		while (token[j].token)
+		{
+			if (format[i] == token[j].token[0])
+			{
+				tokeb
+					n
