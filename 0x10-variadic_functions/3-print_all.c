@@ -11,7 +11,7 @@ void format_char(char *separator, va_list ap)
 /**
  * format_int - formats integer
  * @separator: the string separator
- * @ap: argument pointer 
+ * @ap: argument pointer
  */
 void format_int(char *separator, va_list ap)
 {
@@ -52,7 +52,7 @@ void print_all(const char * const format, ...)
 	va_list ap;
 	token_t token[] = {
 		{"c", format_char},
-		{"i", fofmat_int},
+		{"i", format_int},
 		{"f", format_float},
 		{"s", format_string},
 		{NULL, NULL}
@@ -65,5 +65,12 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == token[j].token[0])
 			{
-				tokeb
-					n
+				token[j].f(separator, ap); separator = ", ";
+			}
+			j++;
+		}
+		i++;
+	}
+	printf("\n");
+	va_end(ap);
+}
